@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<title>Landing page </title>
+<link href="styles.css" rel="stylesheet">
+
+
+</head>
+<body>
+    <div class="imgdiv" style="background-image: url('imgs/bac.png'); background-repeat: inherit; background-size: cover;">
+    <div class="dashboard-1">
+        <h1><b class="Title-1">
+        KVL Auto Service
+    </b>
+    </h1>
+</div>
+
+
+<div class="dashboard-2" id="navbarSupportedContent">
+  
+    <ul class="UL-1">
+        <li class="li-1 btn1"><a  class="a-n" href="about.asp">Home</a></li>
+        <li class="li-1 btn1"><a  class="a-n" href="default.asp">About us</a></li>
+        <li class="li-1 btn1"><a  class="a-n" href="news.asp">Services</a></li>
+        <li class="li-1 btn1"><button class=" myButton" onclick = "alert1()" ><a  class="a-n" >Employment</a></button></button>></li>
+        <li class="li-1 btn1"><a  class="a-n" href="about.asp">Contact</a></li>
+      </ul>
+      </div>
+    
+      <div class="dashboard-3 ">
+      <ul class="UL-2">
+        <li class="li-1 btn1 "><button class="btn-2 myButton" > Sign up </button></li>
+        <li class="li-1 btn1"><button class="btn-2 myButton" ><a  ></a>Loging</a></button></li>
+    
+      
+      </ul> 
+      </div>
+      <div class="se-1">
+      <input class="in-1" type="text" placeholder="Search.."> 
+      <button style="padding:3px 7px;" class="btn-2 myButton" onclick="getLocation()"> <a   > </a>Search</a></button>
+      </div>
+
+      <img class="im" src="imgs/map.jpg" height="100px" width="100px" style="margin-top: 50px; "> 
+ <p id="p-2" class="p-2"></p>
+
+    <div class="discript">
+
+
+
+    <p >
+        <h3>
+        Relationships, like Vehicles Should 
+        Undergo Regular Services to make sure 
+        They are still Roadworthy
+        </h3> 
+        <p  id="date"></p>
+    </p>
+
+   
+</div>
+
+
+<script >
+    
+var x = document.getElementById("p-2");
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude; 
+}
+
+function alert1(){
+
+    document.getElementById('date').innerHTML=alert("This page is not created yet!");
+}
+
+function pageLoading(){
+    location.href='./loginpage/index.html'
+}
+
+
+
+</script>
+</body>
+
+
+</html>
